@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Polygon map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <style>
+        #mapid { height: 900px; }
+    </style>
+</head>
+<body>
+<div id="mapid"></div>
+
+</body>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin="">
+</script>
+<!--tak sie przekazuje Javovy obiekt z modelu do zewnetrznego pliku JS-->
+<script th:inline="javascript">
+    var polygonDetails = [[${polygonDetails}]];
+</script>
+
+<script src="js/mapPolygon.js">
+</script>
+</html>
+<!--
+.bindPopup(countryDetails.countryName + "\n"+ 'Infected: ' + countryDetails.infected + "\n" +
+    'Killed: ' + countryDetails.killed + "\n" +
+    'Recovered: ' + countryDetails.recovered + "\n" +
+    'Last update: ' + countryDetails.lastReleaseDate);})-->
+<!--Jeśli z kodu JavaScript w pliku html, we fragmencie zaczyna
+ącym się od "L.marker..." usuniemy metodę ".openPopup()", przyspieszy nam znacznie ładowanie widoku (
+baaardzo przyspieszy). Aplikacja będzie dalej działać tak jak trzeba. Nie ma za co  -->
