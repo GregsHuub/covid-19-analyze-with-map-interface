@@ -9,10 +9,8 @@ import org.apache.spark.sql.SparkSession
  * @version 1.0
  */
 object Main {
-  //todo sprawdzic pliki CSV ze strony, bo znowu jakies buble, poprzestawialy sie
 
   def main(args: Array[String]): Unit = {
-    //wintutils, zeby bledu nie rzucalo
     setProperty("hadoop.home.dir", "C:\\hadoop");
     val resourcePath = "src/resources/covid-19-csv/"
     val sourceRoot = "src/resources/outputDataPaths.json"

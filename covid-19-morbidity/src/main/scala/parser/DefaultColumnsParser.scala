@@ -12,7 +12,7 @@ object DefaultColumnsParser {
       .withColumn("Long", col("Long").cast(DoubleType))
       .withColumn("Value", col("Value").cast(LongType))
     if (dataColumnToDate) dataFrame = dataFrame.withColumn("Date", col("Date").cast("date"))
-    // wycinanie zbędnego wiersza z hashtagami
+    // delete hashtags
     val df = dataFrame.withColumn("Index", monotonically_increasing_id())
       .filter(col("Index") > 0)
       .drop("Index")
