@@ -1,0 +1,10 @@
+{
+  "time_series_2019-ncov-Deaths": {
+    "Province/State" : "only if country has province/state",
+    "Country/Region" : "name of country",
+    "Lat" : "Latitude of localisation of country",
+    "Long" : "Longitude of localistation of country",
+    "Data" : "from 1/22/2020 till current day, updated every day. Field contains sum of deaths till this day",
+    "Data-format" : "yyyy-MM-dd  :  2020-03-13"
+  }
+}

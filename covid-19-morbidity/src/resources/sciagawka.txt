@@ -1,0 +1,20 @@
+/*
+    to dla skladni z dolarem $
+    przyklad:
+    df.groupBy($"Country/Region").agg(sum($"Value") as "Total").
+  val sqlContext = sparkSession.sqlContext
+  import sqlContext.implicits._
+  */
+
+
+  //wyliczanie procentowe poprzez indexowanie
+  //    val indexedDf = sortedTotalByDate.rdd.zipWithIndex().collect()
+      //
+      //    for (i <- 0 until indexedDf.length - 1) {
+      //      val youngerDate = indexedDf(i)._1.get(1).asInstanceOf[Long]
+      //      val olderDate = indexedDf(i + 1)._1.get(1).asInstanceOf[Long]
+      //      val different = youngerDate - olderDate
+      //      println(youngerDate)
+      //      println(s"wynik $youngerDate minus $olderDate = $different")
+      //      println("wzrost procentowy w ciagu jednego dnia: " + different.toDouble * 100 / youngerDate.toDouble + "%")
+      //    }

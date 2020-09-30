@@ -1,0 +1,9 @@
+{
+  "output_files_path": "src/resources/covid-19-csv/",
+  "file_names": {
+    "confirmed": "covid-19-confirmed.csv",
+    "death": "covid-19-death.csv",
+    "recovered": "covid-19-recovered.csv"
+  },
+  "file_format" : ".csv"
+}
